@@ -35,10 +35,10 @@ class FFXIV:
             searchObject = BeautifulSoup(await response.text(), "html.parser")
         try:
             charid = searchObject.find(class_='player_name_gold').find('a').get_text()
-            data = "```**"+char_name+"**\n"
-   		    data += "\n"
-        	data += "```"
-        	await self.bot.say(data)
+			data = "```**"+char_name+"**\n"
+			data += "\n"
+			data += "```"
+			await self.bot.say(data)
         except:
             await self.bot.say("Character could not be found in lodestone. Please check server and name spelling.")
 
