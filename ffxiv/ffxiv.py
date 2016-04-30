@@ -31,8 +31,8 @@ class FFXIV:
         search_url = url + "q=" + char_fname + "+" + char_lname + "&worldname=" + server_name
         char_name = char_fname + " " + char_lname
 
-        async with aiohttp.get(search_url) as response
-            searchObject = BeautifulSoup(await response.text(). "html.parser")
+        async with aiohttp.get(search_url) as response:
+            searchObject = BeautifulSoup(await response.text(), "html.parser")
         try:
             charid = searchObject.find(class_='player_name_gold').find('a').get_text()
         except:
