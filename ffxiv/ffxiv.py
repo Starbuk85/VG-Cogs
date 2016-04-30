@@ -35,7 +35,7 @@ class FFXIV:
             searchObject = BeautifulSoup(await response.text(), "html.parser")
         try:
             charid = searchObject.find(class_='player_name_gold').find('a').get_text()
-			data = "```**"+char_name+"**\n"
+			data = "```**" + char_name + "**\n"
 			data += "\n"
 			data += "```"
 			await self.bot.say(data)
